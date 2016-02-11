@@ -5,14 +5,14 @@ package yd.deprecated;
  * 
  * @author aaa
  */
-public class Pixel {
+public class PixelMutable {
 
     public static final int MAX_VALUE = 255;
     public static final int MIN_VALUE = 0;
     
     private int value;
 
-    public Pixel(int rgba, boolean hasAlpha) {
+    public PixelMutable(int rgba, boolean hasAlpha) {
         if (hasAlpha) {
             value = rgba;
         } else {
@@ -20,11 +20,11 @@ public class Pixel {
         }
     }
     
-    public Pixel(int red, int green, int blue) {
+    public PixelMutable(int red, int green, int blue) {
         this(red, green, blue, 255);
     }
 
-    public Pixel(int red, int green, int blue, int alpha) {
+    public PixelMutable(int red, int green, int blue, int alpha) {
         value = computePixelValue(red, green, blue, alpha);
     }
     
